@@ -1,0 +1,343 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FEF1EE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A144B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4A144B;
+  opacity: 0.8;
+}
+
+/* Quill Editor Styles */
+.ql-editor {
+  min-height: 300px;
+}
+
+.ql-toolbar {
+  border-top: 1px solid #EECFD0;
+}
+
+.ql-container {
+  border-bottom: 1px solid #EECFD0;
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Form styles */
+.form-input {
+  @apply w-full px-4 py-3 border border-secondary rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200;
+}
+
+.form-textarea {
+  @apply w-full px-4 py-3 border border-secondary rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200;
+  resize: vertical;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-tertiary transition-all duration-200;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-secondary;
+}
+
+.card-hover {
+  @apply hover:scale-105 transition-transform duration-300;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #4A144B 0%, #4A144B 100%);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, #EECFD0 0%, #FEF1EE 100%);
+}
+
+/* Text gradients */
+.text-gradient {
+  background: linear-gradient(135deg, #4A144B 0%, #4A144B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Loading spinner */
+.spinner {
+  @apply animate-spin rounded-full h-8 w-8 border-b-2 border-primary;
+}
+
+/* Mobile menu animation */
+.mobile-menu-enter {
+  transform: translateX(-100%);
+}
+
+.mobile-menu-enter-active {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu-exit {
+  transform: translateX(0);
+}
+
+.mobile-menu-exit-active {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hero section styles */
+.hero-bg {
+  background: linear-gradient(135deg, rgba(74, 20, 75, 0.9) 0%, rgba(74, 20, 75, 0.95) 100%),
+              url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2126&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Service icons animation */
+.service-icon {
+  @apply transition-all duration-300 transform group-hover:scale-110 group-hover:text-white;
+}
+
+/* Stats counter animation */
+@keyframes countUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.stat-counter {
+  animation: countUp 0.8s ease-out;
+}
+
+/* Testimonial styles */
+.testimonial-card {
+  @apply bg-white p-8 rounded-xl shadow-lg relative border border-secondary;
+}
+
+.testimonial-card::before {
+  content: '"';
+  @apply absolute -top-4 left-4 text-6xl text-primary font-serif;
+}
+
+/* CTA section styles */
+.cta-section {
+  background: linear-gradient(135deg, #4A144B 0%, #4A144B 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.1;
+}
+
+/* Blog post styles */
+.blog-content {
+  max-width: none;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #374151;
+}
+
+.blog-content h1 {
+  @apply text-primary font-heading text-3xl font-bold mb-6 mt-8;
+}
+
+.blog-content h2 {
+  @apply text-primary font-heading text-2xl font-bold mb-4 mt-6;
+}
+
+.blog-content h3 {
+  @apply text-primary font-heading text-xl font-semibold mb-3 mt-5;
+}
+
+.blog-content h4 {
+  @apply text-primary font-heading text-lg font-semibold mb-2 mt-4;
+}
+
+.blog-content h5 {
+  @apply text-primary font-heading text-base font-semibold mb-2 mt-3;
+}
+
+.blog-content h6 {
+  @apply text-primary font-heading text-sm font-semibold mb-2 mt-3;
+}
+
+.blog-content p {
+  @apply mb-4 leading-relaxed;
+}
+
+.blog-content a {
+  @apply text-primary hover:opacity-80 underline;
+}
+
+.blog-content ul {
+  @apply list-disc list-inside mb-4 space-y-2;
+}
+
+.blog-content ol {
+  @apply list-decimal list-inside mb-4 space-y-2;
+}
+
+.blog-content li {
+  @apply leading-relaxed;
+}
+
+.blog-content blockquote {
+  @apply border-l-4 border-primary bg-secondary p-4 rounded-r-lg mb-4 italic;
+}
+
+.blog-content code {
+  @apply bg-secondary px-2 py-1 rounded text-sm font-mono;
+}
+
+.blog-content pre {
+  @apply bg-primary text-white p-4 rounded-lg mb-4 overflow-x-auto;
+}
+
+.blog-content img {
+  @apply rounded-lg mb-4 max-w-full h-auto;
+}
+
+.blog-content table {
+  @apply w-full border-collapse mb-4;
+}
+
+.blog-content th {
+  @apply bg-secondary border border-secondary px-4 py-2 text-left font-semibold;
+}
+
+.blog-content td {
+  @apply border border-secondary px-4 py-2;
+}
+
+/* Admin panel styles */
+.admin-sidebar {
+  @apply bg-primary text-white w-64 min-h-screen p-6;
+}
+
+.admin-nav-item {
+  @apply block w-full text-left px-4 py-3 rounded-lg hover:bg-opacity-80 transition-colors duration-200 mb-2;
+}
+
+.admin-nav-item.active {
+  @apply bg-opacity-80;
+}
+
+/* Lead status badges */
+.status-new {
+  @apply bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-contacted {
+  @apply bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-qualified {
+  @apply bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-closed {
+  @apply bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+/* Responsive design utilities */
+@media (max-width: 768px) {
+  .hero-bg {
+    background-attachment: scroll;
+  }
+  
+  .mobile-hidden {
+    display: none;
+  }
+  
+  .mobile-menu {
+    @apply fixed inset-0 bg-white z-50 p-6;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card {
+    border: 2px solid #4A144B;
+  }
+  
+  .btn-primary {
+    border: 2px solid #4A144B;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .hero-bg {
+    background-attachment: scroll;
+  }
+}

@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://silahub.com/sitemap.xml
+
+# Block admin areas
+Disallow: /admin/
+Disallow: /silahub-admin-login
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /seo-calgary
+Allow: /pricing
+Allow: /case-studies
+Allow: /blog
+Allow: /contact
+Allow: /marketing-calculator
+Allow: /hvac-marketing-blueprint
+Allow: /plumbing-marketing-blueprint
+Allow: /electrical-marketing-blueprint
+Allow: /roofing-marketing-blueprint
+Allow: /landscaping-marketing-blueprint
+Allow: /cleaning-marketing-blueprint
+Allow: /flooring-marketing-blueprint
+
+# Crawl delay
+Crawl-delay: 1
